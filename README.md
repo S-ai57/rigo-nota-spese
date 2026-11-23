@@ -20,6 +20,24 @@ identiche tra due ricevute). Solo estrazione, mai verdetti.
 Il BFF sta su `http://127.0.0.1:8790` (solo locale):
 `GET /api/salute` e `POST /api/leggi` (chiede il token `DEMO_TOKEN`).
 
+## L'app online
+
+**https://s-ai57.github.io/rigo-nota-spese/** — interfaccia sempre online,
+per guardare la demo senza installare niente (i dati sono inventati, come
+nel dataset). Per far LEGGERE gli allegati al modello da chi apre il link
+valgono le stesse regole della demo smistamento email:
+
+- chi riceve il **link del tunnel** (`Condividi app col collega.command`)
+  usa tutto col modello, senza installare niente: il modello gira sul Mac
+  di chi condivide, il link muore chiudendo la finestra;
+- in alternativa chi apre il link di GitHub Pages può avviare **il proprio**
+  BFF locale (clone + `.env` con la propria chiave + `node server/server.js`):
+  la pagina lo trova sul suo `localhost` e il browser chiede una volta il
+  permesso di accedere alla rete locale, basta **Consenti**;
+- senza motore raggiungibile la demo resta navigabile e la verifica dice
+  onestamente che la lettura non è riuscita: i verdetti, quando ci sono,
+  restano comunque solo dalle regole.
+
 ## Il confine (voluto, da BLUEPRINT)
 
 | Chi fa cosa | Chi |
